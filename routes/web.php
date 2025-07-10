@@ -19,3 +19,4 @@ Route::get('student',[AboutController::class,'index']);
 Route::get('dashboard',[AboutController::class,'dashboard']);
 Route::get('about-detail/{name}/{id}',[AboutController::class,'aboutDetail']);
 Route::post('about-detail',[AboutController::class,'aboutDetail']);
+Route::post('contact',[AboutController::class,'aboutDetail']);
