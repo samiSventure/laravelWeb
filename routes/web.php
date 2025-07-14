@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +21,11 @@ Route::get('dashboard',[AboutController::class,'dashboard']);
 Route::get('about-detail/{name}/{id}',[AboutController::class,'aboutDetail']);
 Route::post('about-detail',[AboutController::class,'aboutDetail']);
 Route::post('contact',[AboutController::class,'aboutDetail']);
+
+//Route::get('/contact', function () {
+//    return view('contact');
+//});
+//Route::view('/contact','contact');
+Route::get('/contact',[ContactController::class,'index']);
+Route::get('/login',[ContactController::class,'login']);
+Route::view('/front','front.index');
