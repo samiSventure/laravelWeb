@@ -8,6 +8,9 @@
     <title>About</title>
 </head>
 <body>
+@include('compoent.header', ['title' => 'About Page Header'])
+
 <h1>this is about page</h1>
+@include('compoent.Footer' , ['title' => 'About Page Footer'])
 </body>
 </html>

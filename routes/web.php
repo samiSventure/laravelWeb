@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,6 +22,7 @@ Route::get('dashboard',[AboutController::class,'dashboard']);
 Route::get('about-detail/{name}/{id}',[AboutController::class,'aboutDetail']);
 Route::post('about-detail',[AboutController::class,'aboutDetail']);
 Route::post('contact',[AboutController::class,'aboutDetail']);
+Route::get('profile',[DashboardController::class,'profile']);
 
 //Route::get('/contact', function () {
 //    return view('contact');
