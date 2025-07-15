@@ -30,4 +30,5 @@ Route::get('profile',[DashboardController::class,'profile']);
 //Route::view('/contact','contact');
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/login',[ContactController::class,'login']);
+Route::get('/login',[ContactController::class,'login']);
 Route::view('/front','front.index');
