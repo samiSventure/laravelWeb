@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StudentController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -32,3 +33,6 @@ Route::get('/contact',[ContactController::class,'index']);
 Route::get('/login',[ContactController::class,'login']);
 Route::get('/login',[ContactController::class,'login']);
 Route::view('/front','front.index');
+
+// Student Routes
+Route::get('student/create',[StudentController::class,'create']);

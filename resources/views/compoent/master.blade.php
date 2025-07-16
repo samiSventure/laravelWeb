@@ -13,9 +13,9 @@
 <div class="wrapper">
 
     <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div>
+{{--    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
+    </div>--}}
 
     <!-- Navbar -->
 @include('compoent.header')
@@ -33,7 +33,7 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
+@include('compoent.Footer')
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
