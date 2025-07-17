@@ -36,3 +36,4 @@ Route::view('/front','front.index');
 
 // Student Routes
 Route::get('student/create',[StudentController::class,'create']);
+Route::post('student/store',[StudentController::class,'store']);
