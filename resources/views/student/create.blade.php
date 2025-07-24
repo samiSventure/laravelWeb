@@ -24,6 +24,16 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
+       {{--     @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif--}}
+
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-12">
@@ -39,15 +49,25 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Name</label>
-                                    <input type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name">
+                                    <input value="{{ old('Name') }}" type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name">
+                                    @error('Name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                    @enderror
+
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email">
+                                    @error('Email')
+                                    <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1" name="Password" placeholder="Password">
+                                    @error('Password')
+                                    <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
 {{--                                <div class="form-group">--}}
 {{--                                    <label for="exampleInputFile">File input</label>--}}
@@ -74,6 +94,9 @@
                                     <input type="checkbox" class="form-check-input" id="Programing" name="Interest[]" value="Programing">
                                     <label class="form-check-label" for="Programing">Programing</label>
                                 </div>
+                                @error('Interest')
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <!-- /.card-body -->
 
