@@ -32,8 +32,14 @@ Route::get('profile',[DashboardController::class,'profile']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/login',[ContactController::class,'login']);
 Route::get('/login',[ContactController::class,'login']);
-Route::view('/front','front.index');
+//Route::get('student/create',[StudentController::class,'create'])->middleware('check');
 
+Route::middleware('check')->group(function (){
+    Route::view('/front','front.index');
 // Student Routes
-Route::get('student/create',[StudentController::class,'create']);
-Route::post('student/store',[StudentController::class,'store']);
+    Route::get('student/create',[StudentController::class,'create']);
+    Route::post('student/store',[StudentController::class,'store']);
+});
+
+
+
