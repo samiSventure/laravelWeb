@@ -33,7 +33,7 @@ Route::get('/contact',[ContactController::class,'index']);
 Route::get('/login',[ContactController::class,'login']);
 Route::get('/login',[ContactController::class,'login']);
 //Route::get('student/create',[StudentController::class,'create'])->middleware('check');
-
+Route::get('student/index',[StudentController::class,'index'])->name('student.index');
 Route::middleware('check')->group(function (){
     Route::view('/front','front.index');
 // Student Routes

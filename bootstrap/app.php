@@ -15,7 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
-        $middleware->append(ageCheck::class);
+        //$middleware->append(ageCheck::class);
         //$middleware->append(ageCheck::class);
     /*    $middleware->appendToGroup('check',[
            ageCheck::class,

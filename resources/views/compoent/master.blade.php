@@ -27,7 +27,9 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-
+        @if(session('success'))
+            <p style="color: green;">{{ session('success') }}</p>
+        @endif
         @yield('content')
 
         <!-- /.content -->
