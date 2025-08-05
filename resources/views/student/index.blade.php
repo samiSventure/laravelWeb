@@ -18,6 +18,9 @@
                     </ol>
                 </div>
             </div>
+            @if(session('success'))
+                <p style="color: green;">{{ session('success') }}</p>
+            @endif
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -55,7 +58,11 @@
                                     <td>{{$student->name}}</td>
                                     <td>{{$student->email}}</td>
                                     <td>{{$student->password}}</td>
-                                    <td>delete /edit</td>
+                                    <td>
+                                        <a href="{{route('show',$student->id)}}">Show</a>
+                                        <a href="{{route('edit',$student->id)}}">Edit</a>
+                                        <a href="{{route('delete',$student->id)}}">Delete</a>
+                                    </td>
 
                                 </tr>
                                 @endforeach

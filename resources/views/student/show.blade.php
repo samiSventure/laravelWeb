@@ -5,7 +5,13 @@
 @endsection
 @section('content')
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+
+    User Name => {{$student->name}}
+    <br>
+    User Email => {{$student->email}}
+    <br>
+    User Password => {{$student->password}}
+{{--    <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
@@ -24,7 +30,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-       {{--     @if ($errors->any())
+       --}}{{--     @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
@@ -32,7 +38,7 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif--}}
+            @endif--}}{{--
 
             <div class="row">
                 <!-- left column -->
@@ -69,19 +75,19 @@
                                     <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-{{--                                <div class="form-group">--}}
-{{--                                    <label for="exampleInputFile">File input</label>--}}
-{{--                                    <div class="input-group">--}}
-{{--                                        <div class="custom-file">--}}
-{{--                                            <input type="file" class="custom-file-input" id="exampleInputFile">--}}
-{{--                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="input-group-append">--}}
-{{--                                            <span class="input-group-text">Upload</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-                             {{--   <div class="form-check">
+--}}{{--                                <div class="form-group">--}}{{--
+--}}{{--                                    <label for="exampleInputFile">File input</label>--}}{{--
+--}}{{--                                    <div class="input-group">--}}{{--
+--}}{{--                                        <div class="custom-file">--}}{{--
+--}}{{--                                            <input type="file" class="custom-file-input" id="exampleInputFile">--}}{{--
+--}}{{--                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>--}}{{--
+--}}{{--                                        </div>--}}{{--
+--}}{{--                                        <div class="input-group-append">--}}{{--
+--}}{{--                                            <span class="input-group-text">Upload</span>--}}{{--
+--}}{{--                                        </div>--}}{{--
+--}}{{--                                    </div>--}}{{--
+--}}{{--                                </div>--}}{{--
+                             --}}{{--   <div class="form-check">
                                     <label class="form-check-label" >Interest</label>
                                     <br>
 
@@ -93,10 +99,10 @@
                                     <br>
                                     <input type="checkbox" class="form-check-input" id="Programing" name="Interest[]" value="Programing">
                                     <label class="form-check-label" for="Programing">Programing</label>
-                                </div>--}}
-                             {{--   @error('Interest')
+                                </div>--}}{{--
+                             --}}{{--   @error('Interest')
                                 <small class="text-danger">{{ $message }}</small>
-                                @enderror--}}
+                                @enderror--}}{{--
                             </div>
                             <!-- /.card-body -->
 
@@ -116,5 +122,5 @@
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
-    </section>
+    </section>--}}
 @endsection
