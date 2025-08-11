@@ -53,13 +53,15 @@ class StudentController extends Controller
     public function show($id)
     {
         $student = Student::findOrFail($id);
+      //  return $student->profile;
         //dd($student);
         return view('student.show', compact('student'));
     }
     public function edit($id)
     {
-        $student = Student::findOrFail($id);
-       // dd($student);
+        $student = Student::find($id);
+
+       return $student->profile;
         return view('student.edit', compact('student'));
     }
 

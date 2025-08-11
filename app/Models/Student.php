@@ -8,4 +8,7 @@ class Student extends Model
 {
     //
     protected $table='my_students';
+    public function profile(){
+     return $this->hasOne(Profile::class,'ST_ID');
+    }
 }

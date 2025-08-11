@@ -48,6 +48,8 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Password</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -58,6 +60,8 @@
                                     <td>{{$student->name}}</td>
                                     <td>{{$student->email}}</td>
                                     <td>{{$student->password}}</td>
+                                    <td>{{$student->profile->address ?? ''}}</td>
+                                    <td>{{$student->profile->phone ?? ''}}</td>
                                     <td>
                                         <a href="{{route('show',$student->id)}}">Show</a>
                                         <a href="{{route('edit',$student->id)}}">Edit</a>
