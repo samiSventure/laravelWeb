@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="Email" placeholder="Enter email">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="Email[]" placeholder="Enter email">
                                     @error('Email')
                                     <small class="text-danger">{{ $message }}</small>
                                     @enderror
