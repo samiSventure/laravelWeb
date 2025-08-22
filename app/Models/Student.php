@@ -12,6 +12,9 @@ class Student extends Model
      return $this->hasOne(Profile::class,'ST_ID');
     }
     public function cousre(){
-        return $this->hasMany(Course::class,'studentId');
+        return $this->hasMany(Course::class);
+    }
+    public function courses(){
+        return $this->belongsToMany(Course::class);
     }
 }

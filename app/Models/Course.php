@@ -11,4 +11,7 @@ class Course extends Model
     public function student(){
         return $this->belongsTo(Student::class,'id');
     }
+    public function students(){
+        return $this->belongsToMany(Student::class,'');
+    }
 }

@@ -69,8 +69,8 @@ class StudentController extends Controller
     }
     public function show($id)
     {
-        $student = Student::findOrFail($id);
-       // return $student->cousre;
+        $student = Course::findOrFail($id);
+        //return $student->students;
         foreach ($student->cousre as $course){
             echo $course->title."<br>";
     }
